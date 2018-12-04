@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<metadata>
+	<layout title="COM_PRICE_FRONT_MENU"/>
+	<fields name="request">
+		<fieldset name="request"></fieldset>
+	</fields>
+</metadata>

@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<extension type="component" version="3.9" method="upgrade">
+    <name>COM_PRICE</name>
+    <author>Aleksey A. Morozov</author>
+    <authorEmail>alekvolsk@yandex.ru</authorEmail>
+    <authorUrl>https://alekvolsk.pw</authorUrl>
+    <copyright>© 2018 Aleksey A. Morozov. All right reserved.</copyright>
+    <license>GNU GPL v3 or later</license>
+    <version>2.0.0</version>
+    <description>COM_PRICE_DESC</description>
+    <creationDate>December 2018</creationDate>
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	<files folder="site">
+		<filename>price.php</filename>
+		<filename>controller.php</filename>
+		<folder>models</folder>
+		<folder>views</folder>
+	</files>
+	<languages folder="site">
+		<language tag="en-GB">language/en-GB/en-GB.com_price.ini</language>
+		<language tag="ru-RU">language/ru-RU/ru-RU.com_price.ini</language>
+	</languages>
+    <administration>
+        <menu>COM_PRICE_MENU</menu>
+        <files folder="admin">
+            <filename>price.php</filename>
+            <filename>controller.php</filename>
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <folder>controllers</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+			<folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+        <languages folder="admin">
+            <language tag="en-GB">language/en-GB/en-GB.com_price.ini</language>
+            <language tag="en-GB">language/en-GB/en-GB.com_price.sys.ini</language>
+            <language tag="ru-RU">language/ru-RU/ru-RU.com_price.ini</language>
+            <language tag="ru-RU">language/ru-RU/ru-RU.com_price.sys.ini</language>
+        </languages>
+    </administration>
+</extension>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<form>
+	<fieldset>
+		<field name="catid" type="category" label="JCATEGORY" required="true" class="inputbox input-xxlarge" extension="com_price"/>
+		<field name="title" type="text" label="JGLOBAL_TITLE" required="true" class="inputbox input-xxlarge"/>
+		<field name="unit" type="radiodb" label="COM_PRICE_ITEM_COLUMN_UNIT" class="btn-group" src="select id as `key`, name as `value` from #__pricelist_points order by id" addfieldpath="/administrator/components/com_price/models/fields"/>
+		<field name="val" type="text" label="COM_PRICE_ITEM_COLUMN_VAL" filter="intval"/>
+		<field name="published" type="list" label="JSTATUS" class="chzn-color-state" filter="intval" default="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+		<field name="id" type="text" label="JGLOBAL_FIELD_ID_LABEL" readonly="true" default="0"/>
+	</fieldset>
+</form>
