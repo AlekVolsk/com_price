@@ -4,11 +4,11 @@
     <author>Aleksey A. Morozov</author>
     <authorEmail>alekvolsk@yandex.ru</authorEmail>
     <authorUrl>https://alekvolsk.pw</authorUrl>
-    <copyright>© 2018 Aleksey A. Morozov. All right reserved.</copyright>
+    <copyright>© 2019 Aleksey A. Morozov. All right reserved.</copyright>
     <license>GNU GPL v3 or later</license>
-    <version>2.0.0</version>
+    <version>2.0.1</version>
     <description>COM_PRICE_DESC</description>
-    <creationDate>December 2018</creationDate>
+    <creationDate>February 2019</creationDate>
 	<install>
 		<sql>
 			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>

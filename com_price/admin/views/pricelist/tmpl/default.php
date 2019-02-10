@@ -18,21 +18,21 @@ if ($saveOrder) {
 	HTMLHelper::_('sortablelist.sortable', 'articleList', 'adminForm', strtolower($listDirn), 'index.php?option=com_price&task=pricelist.saveOrderAjax&tmpl=component');
 }
 
-?>
-
-<script type="text/javascript">
-	Joomla.orderTable = function () {
-		var table = document.getElementById("sortTable");
-		var direction = document.getElementById("directionTable");
-		var order = table.options[table.selectedIndex].value;
-		if (order != '<?php echo $listOrder; ?>') {
-			dirn = 'asc';
-		} else {
-			dirn = direction.options[direction.selectedIndex].value;
-		}
-		Joomla.tableOrdering(order, dirn, '');
+Factory::getDocument()->addScriptDeclaration("
+Joomla.orderTable = function () {
+	var table = document.getElementById('sortTable');
+	var direction = document.getElementById('directionTable');
+	var order = table.options[table.selectedIndex].value;
+	if (order != '" . $listOrder . "') {
+		dirn = 'asc';
+	} else {
+		dirn = direction.options[direction.selectedIndex].value;
 	}
-</script>
+	Joomla.tableOrdering(order, dirn, '');
+}
+}");
+
+?>
 
 <form action="<?php echo Route::_('index.php?option=com_price&view=pricelist'); ?>" method="post" name="adminForm" id="adminForm">
 	

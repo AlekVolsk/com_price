@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.9" type="package" method="upgrade">
+    <name>Price list package</name>
+    <packagename>price</packagename>
+    <version>2.0.1</version>
+    <creationDate>February 2019</creationDate>
+    <author>Aleksey A. Morozov</author>
+    <authorEmail>alekvolsk@yandex.ru</authorEmail>
+    <authorUrl>https://alekvolsk.pw</authorUrl>
+    <copyright>© 2019 Aleksey A. Morozov. All right reserved.</copyright>
+    <license>GNU General Public License version 3 or later; see http://www.gnu.org/licenses/gpl-3.0.txt</license>
+    <packager>Aleksey A. Morozov</packager>
+    <description>Price list installation package</description>
+    <files>
+        <file type="component" id="com_price">com_price.zip</file>
+        <file type="module" id="mod_price" client="site">mod_price.zip</file>
+    </files>
+</extension>

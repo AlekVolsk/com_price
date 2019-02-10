@@ -9,16 +9,16 @@ HTMLHelper::_('bootstrap.tooltip');
 HTMLHelper::_('behavior.formvalidation');
 HTMLHelper::_('formbehavior.chosen', 'select');
 
-?>
-<script type="text/javascript">
-	Joomla.submitbutton = function (task) {
-		if (task == 'priceitem.cancel' || document.formvalidator.isValid(document.id('item-form'))) {
-			Joomla.submitform(task, document.getElementById('item-form'));
-		} else {
-			alert('<?php echo $this->escape(Text::_('JGLOBAL_VALIDATION_FORM_FAILED')); ?>');
-		}
+Factory::getDocument()->addScriptDeclaration("
+Joomla.submitbutton = function (task) {
+	if (task == 'priceitem.cancel' || document.formvalidator.isValid(document.id('item-form'))) {
+		Joomla.submitform(task, document.getElementById('item-form'));
+	} else {
+		alert('" . $this->escape(Text::_('JGLOBAL_VALIDATION_FORM_FAILED')) . "');
 	}
-</script>
+}");
+
+?>
 <form action="<?php echo Route::_('index.php?option=com_price&id=' . $this->form->getValue('id')); ?>" method="post" name="adminForm" id="item-form" class="form-validate" enctype="multipart/form-data">
 	
 	<legend><?php echo $this->title; ?></legend>
